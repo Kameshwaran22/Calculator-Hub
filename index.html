@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Calculator Hub — a scientific calculator, unit converter, and complete personal finance suite: SIP, SWP, loans, retirement planning, FD/RD, gold, bonds, and more." />
+    <meta name="theme-color" content="#09090b" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta property="og:title" content="Calculator Hub" />
+    <meta property="og:description" content="Scientific calculator, unit converter, and personal finance suite in one app." />
+    <meta property="og:type" content="website" />
+    <title>Calculator Hub</title>
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('calculator_hub_theme') || 'dark';
+          document.documentElement.setAttribute('data-theme', saved);
+          if (saved === 'light') {
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+          }
+        } catch(e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
